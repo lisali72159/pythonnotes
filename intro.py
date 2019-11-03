@@ -122,5 +122,37 @@ class Node:
                 if node.left is not None: s.append(node.left)
 
         dfPrint(a)
+        # depthFirst: a, b, d, e, c
+        print('--')
+        bfPrint(a)
+        # breathFirst: a, b, c, d, e
+
+        def dfPrintRecursive(root):
+            # if the root is not None
+            if root is not None: return
+
+            print(root.val)
+            dfPrintRecursive(root.left)
+            printRecusrive(root.right)
+
+        print(dfPrintRecursive(a))
 
 
+# a = [1,2]
+# b = [1,2]
+# a == b is true! Python does not check if they are the same in memory. Only checked if the items are in the same order
+
+
+# x is y 
+# Using 'is' checks if they are stored in the same in memory.
+
+
+array = [1,2,3,4]
+obj = {"a": 1, "b": 2}
+s = 'hello'
+
+print(len(array))
+print(len(obj))
+print(len(s))
+print(max(array))
+# You can use the same len, it's a global method 
